@@ -1,6 +1,13 @@
-# PROJECT_NAME
+# imarina-load-researchers
 
-Brief one-paragraph description of what PROJECT_NAME does and who it is for.
+`imarina-load-researchers` produces the researcher-data spreadsheet that ICIQ
+loads into [iMarina](https://en.wikipedia.org/wiki/Research_information_system),
+its CRIS (Current Research Information System). It merges an A3 HR database
+dump with the previous iMarina load into the next iMarina-format load file,
+using a Sharepoint/Microsoft List-driven pipeline (`download` → `build` →
+`upload` → human review/approval → `publish`) orchestrated by Jenkins and
+Power Automate. It's for the ICIQ staff who maintain the researcher list kept
+in sync between HR records and iMarina.
 
 ## Where to start
 
