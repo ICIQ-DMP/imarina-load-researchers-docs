@@ -2,18 +2,20 @@
 # PROJECT-SPECIFIC — change these when forking the template
 # ─────────────────────────────────────────────────────────────────────────────
 site_name: "imarina-load-researchers Documentation"
-site_url: "https://ICIQ-DMP.github.io/imarina-load-researchers/"
+# The docs repo itself is named imarina-load-researchers-docs, and that's
+# what GitHub Pages actually publishes under -- not imarina-load-researchers.
+site_url: "https://ICIQ-DMP.github.io/imarina-load-researchers-docs/"
 repo_url: "https://github.com/ICIQ-DMP/imarina-load-researchers"
 repo_name: "ICIQ-DMP/imarina-load-researchers"
 
 # Source code repo from which API reference is generated.
-# This value is also read by the CI workflow (see .github/workflows/deploy-docs.yml).
+# This value is also read by the CI workflow (see .github/workflows/docs.yml).
 extra:
   source_repo: "ICIQ-DMP/imarina-load-researchers"
   project_name: "imarina-load-researchers"
 
 # ─────────────────────────────────────────────────────────────────────────────
-# COMMON — do not change; update in template-docs and sync to forks
+# COMMON — do not change; update in docs-template and sync to forks
 # ─────────────────────────────────────────────────────────────────────────────
 docs_dir: docs
 site_dir: site

@@ -1,18 +1,29 @@
-# template-docs
+# docs-template
 
 ProperDocs base repo for ICIQ-DMP project documentation.  
 Fork this repo to create `PROJECT-docs` for any ICIQ project.
 
 ## Forking checklist
 
-1. Fork this repo to `iciq-dmp/PROJECT-docs`.
-2. In `properdocs.yml`, update the **PROJECT-SPECIFIC** block at the top:
+1. Fork this repo to `ICIQ-DMP/PROJECT-docs`.
+2. **Enable GitHub Actions for the fork**: open the new fork's **Actions**
+   tab in a browser and click **"I understand my workflows, go ahead and
+   enable them."** GitHub disables Actions on every fork by default, and
+   there's no error or failed run to notice if you skip this — the
+   `docs.yml` workflow just silently never triggers on push, and no API/CLI
+   can do this step for you. Do this **before** anything else below; it's
+   exactly what left `imarina-load-researchers-docs` unpublished for
+   months, because this step was missed.
+3. In `properdocs.yml`, update the **PROJECT-SPECIFIC** block at the top:
    - `site_name`, `site_url`, `repo_url`, `repo_name`
    - `extra.source_repo` — the GitHub repo containing the source code
    - `extra.project_name`
-3. Edit `docs/index.md` with the project description.
-4. Enable GitHub Pages in the repo settings (source: **GitHub Actions**).
-5. Push to `main`/`master` — the `deploy-docs.yml` workflow will build and deploy.
+4. Edit `docs/index.md` with the project description.
+5. Enable GitHub Pages in the repo settings (source: **GitHub Actions**) —
+   or call `POST /repos/ICIQ-DMP/PROJECT-docs/pages` with
+   `{"build_type": "workflow"}`, which does the same thing.
+6. Push to `main`/`master` — the `docs.yml` workflow will build, lint and
+   deploy.
 
 ## Syncing template changes
 
@@ -32,7 +43,7 @@ docs/
 properdocs.yml
 requirements.txt
 .github/workflows/
-└── deploy-docs.yml     # Build + deploy to GitHub Pages
+└── docs.yml            # Build, lint (markdownlint) + deploy to GitHub Pages
 ```
 
 ## Local development
