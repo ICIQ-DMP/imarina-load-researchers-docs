@@ -36,27 +36,24 @@ _src_roots = _find_src_roots(_search_root) or [_search_root]
 ref_root = Path("reference")
 nav = mkdocs_gen_files.Nav()
 
-for path in sorted(src_root.rglob("*.py")):
-    module_path = path.relative_to(src_root).with_suffix("")
-    doc_path = path.relative_to(src_root).with_suffix(".md")
-    full_doc_path = ref_root / doc_path
-
-    parts = tuple(module_path.parts)
-
-    if parts[-1] == "__init__":
-        parts = parts[:-1]
-        doc_path = doc_path.with_name("index.md")
+for src_root in _src_roots:
+    for path in sorted(src_root.rglob("*.py")):
+        module_path = path.relative_to(src_root).with_suffix("")
+        doc_path = path.relative_to(src_root).with_suffix(".md")
         full_doc_path = ref_root / doc_path
 
         parts = tuple(module_path.parts)
 
-    # Skip private modules, test files, and setup scripts (filter on resolved parts, not raw path)
-    if any(part.startswith(("_", "test_", "setup", "conf")) for part in parts):
-        continue
-
-    nav[parts] = doc_path.as_posix()
+        if parts[-1] == "__init__":
+            parts = parts[:-1]
+            doc_path = doc_path.with_name("index.md")
+            full_doc_path = ref_root / doc_path
 
         if not parts:
+            continue
+
+        # Skip private modules, test files, and setup scripts (filter on resolved parts, not raw path)
+        if any(part.startswith(("_", "test_", "setup", "conf")) for part in parts):
             continue
 
         nav[parts] = doc_path.as_posix()
