@@ -8,5 +8,5 @@ If you are new to imarina-load-researchers, start here.
 
 ---
 
-<!-- Add tutorial pages below, e.g.: -->
-<!-- - [Getting Started](getting-started.md) -->
+- [Getting started](getting-started.md) — set up the project locally and
+  run `build` end to end against a small sample dataset.
