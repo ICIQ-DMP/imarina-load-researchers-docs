@@ -8,18 +8,18 @@ It is forked to create per-project docs repos.
 **Organization:** ICIQ-DMP (github.com/iciq-dmp, pages at ICIQ-DMP.github.io)
 
 **Projects with docs:**
-- `imarina` → `iciq-dmp/imarina-docs` → ICIQ-DMP.github.io/imarina
+- `imarina-load-researchers` → `iciq-dmp/imarina-load-researchers-docs` → ICIQ-DMP.github.io/imarina-load-researchers
 - `justicier` → `iciq-dmp/justicier-docs` → ICIQ-DMP.github.io/justicier
 - `justifactu` → `iciq-dmp/justifactu-docs` → ICIQ-DMP.github.io/justifactu
 
 **Source code repos** (separate from docs repos, contain docstrings):
-- `iciq-dmp/imarina`, `iciq-dmp/justicier`, `iciq-dmp/justifactu`
+- `iciq-dmp/imarina-load-researchers`, `iciq-dmp/justicier`, `iciq-dmp/justifactu`
 
 ## Architecture
 
 ```
 template-docs (this repo, upstream)
-    └── forked to: imarina-docs, justicier-docs, justifactu-docs
+    └── forked to: imarina-load-researchers-docs, justicier-docs, justifactu-docs
                        │
                        │ CI workflow checks out source repo at build time
                        ▼
