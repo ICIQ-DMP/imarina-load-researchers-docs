@@ -78,6 +78,13 @@ approval carries a link to the file for review.
 
 ## 5. A human approves or rejects
 
+Nothing stops the requester from editing the generated file directly on
+SharePoint before deciding — the publish pipeline (step 6) later fetches
+whatever is currently at the "iMarina Excel output link" at approval time,
+not a snapshot taken when `upload` first wrote it. So a requester who finds
+fixable errors can correct them in place and then approve, and those
+corrections are what gets published; there's no separate resubmission step.
+
 - **Reject** → Workflow State becomes `Not published`. Nothing further
   happens; the file is never sent to iMarina.
 - **Approve** → Workflow State immediately becomes `Approved publication`,

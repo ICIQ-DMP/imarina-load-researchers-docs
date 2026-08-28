@@ -53,13 +53,26 @@ it should be published to the live iMarina server. Open the file and check
 it looks right — new hires present, people who've left flagged with an end
 date, changed positions reflected — before deciding.
 
+After reviewing, you have three options:
+
+- **No errors found** — approve the request as-is, so the generated file
+  gets published to iMarina unchanged.
+- **Fixable errors found** — correct them directly in that same SharePoint
+  file, save it, then approve the request. Whatever is in the file at the
+  moment you approve is what gets published, so your corrections are carried
+  through automatically; there's no separate step to resubmit a fixed file.
+- **Too many errors, or you're not satisfied with the result** — reject the
+  approval instead (see step 4).
+
 ## 4. Approve or reject
 
-- **Approve** the Microsoft Approval to publish the file to iMarina. You'll
+- **Approve** the Microsoft Approval to publish the file to iMarina — either
+  as generated, or with any corrections you saved into it in step 3. You'll
   get a second email once the publish has actually gone through.
-- **Reject** it if something looks wrong. No file is published, and you can
-  investigate (or ask HR for a corrected A3 export and submit a new request)
-  without anything having reached the live iMarina server.
+- **Reject** it if something looks wrong and isn't worth fixing by hand. No
+  file is published, and you can investigate (or ask HR for a corrected A3
+  export and submit a new request) without anything having reached the live
+  iMarina server.
 
 ## If something goes wrong
 
