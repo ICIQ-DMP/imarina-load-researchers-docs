@@ -6,8 +6,8 @@ real-world problem, assuming you already know the basics.
 ---
 
 - [How to request an iMarina load](request-an-imarina-load.md) — for
-  requesters: fill in the form, review the generated file, approve or
-  reject publication.
+  requesters: put the A3 and previous-iMarina files on SharePoint, fill in
+  the form, review the generated file, approve or reject publication.
 - [How to run the full pipeline locally](run-the-pipeline-locally.md) —
   reproduce a real `download` → `build` → `upload` → `notify` run by hand.
 - [How to configure secrets](configure-secrets.md) — supply SharePoint, FTP
