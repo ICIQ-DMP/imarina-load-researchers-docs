@@ -13,10 +13,10 @@ and understand the shape of the 9 files `build` needs.
 
 ## 1. Install the prerequisites
 
-`imarina-load-researchers` targets Python 3.14. On Ubuntu:
+`imarina-load-researchers` targets Python 3.13. On Ubuntu:
 
 ```shell
-sudo apt install python3.14-venv gcc build-essential git -y
+sudo apt install python3.13-venv gcc build-essential git -y
 ```
 
 ## 2. Clone the repository and install
